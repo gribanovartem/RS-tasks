@@ -169,3 +169,199 @@ header nav ul li:nth-child(4) {
    height: 504px;
    background-color: #F5F6F7;
 }
+
+#OurCommunity .container {
+   display: flex;
+   justify-content: space-between;
+}
+#OurCommunity .container .content-block {
+   width: 298px;
+   text-align: center;
+   margin-top: 154px;
+}
+#OurCommunity .container .content-block h4 {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   letter-spacing: 2.4px;
+   text-transform: uppercase;
+   margin-top: 16px;
+   margin-bottom: 14px;
+}
+#OurCommunity .container .content-block p {
+   font-size: 14px;
+   line-height: 145%;
+}
+#OurCommunity .container .slider .slider-nav span {
+   font-size: 18px;
+   line-height: 140%;
+   letter-spacing: 4px;
+   color: #373737;
+}
+#OurCommunity .container .slider {
+   margin-top: 77px;
+   position: relative;
+}
+#OurCommunity .container .slider .slider-nav img:nth-child(1) {
+   margin-right: 5px;
+}
+#OurCommunity .container .slider .slider-nav img {
+   cursor: pointer;
+}
+#OurCommunity .container .slider .slider-nav img:hover {
+   transform: scale(1.2);
+}
+#OurCommunity .container .slider .slider-img {
+   display: flex;
+   position: absolute;
+   left: -544px;
+   top: 42px;
+}
+#OurCommunity .container .slider .slider-img img {
+   margin-right: 30px;
+}
+
+/* Implement */
+#Implement {
+   margin-bottom: 140px;
+}
+#Implement .container {
+   display: flex;
+   margin-top: 119px;
+}
+#Implement .container .content-block {
+   margin-left: 139px;
+   margin-top: 174px;
+}
+#Implement .container .content-block button {
+   width: 180px;
+}
+
+/* Subscribe */
+
+#Subscribe {
+   height: 598px;
+   background: url('./assets/pexels-christina-morillo-1181675\ 1.jpg');
+}
+#Subscribe .container h2 {
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 28px;
+   text-align: center;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   padding-top: 217px;
+}
+#Subscribe .container .inputMail {
+   display: flex;
+   justify-content: center;
+   margin-top: 30px;
+}
+#Subscribe .container input {
+   width: 340px;
+   height: 46px;
+   padding: 0;
+   border: 0;
+   font-size: 14px;
+   line-height: 140%;
+}
+#Subscribe .container input::placeholder {
+   padding-left: 24px;
+}
+#Subscribe .container input:focus {
+   border: none;
+   outline: auto 5px #009CC2;
+}
+#Subscribe .container .btn-submit {
+   width: 66px;
+   height: 46px;
+   background: #00AFDB;
+   border: none;
+   font-size: 0;
+   cursor: pointer;
+}
+#Subscribe .container .btn-submit:hover {
+  background-color: #009CC2;
+}
+
+/* Download */
+
+#Download {
+   background-color: #F5F6F7;
+}
+#Download .container h3 {
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 28px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #373737;
+   text-align: center;
+   margin-top: 0;
+   margin-bottom: 21px;
+   padding-top: 120px;
+}
+#Download .container p {
+   font-size: 14px;
+   line-height: 145%;
+   text-align: center;
+   color: #4E4E4E;
+   margin-bottom: 29px;
+}
+#Download .container .store {
+   margin: 0 auto;
+   width: 406px;
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 180px;
+}
+#Download .container .store .btn-store {
+   width: 188px;
+   height: 50px;
+   display: flex;
+   padding: 0;
+   border: none;
+   cursor: pointer;
+   flex-direction: row-reverse;
+}
+.store-icon:hover + .store-name {
+   background-color: #009CC2 !important;
+}
+#Download .container .store .btn-store .store-name:hover {
+   background-color: #009CC2;
+}
+.store-icon:hover img {
+   transform: scale(1.2);
+}
+#Download .container .store .btn-store .store-name {
+   width: 128px;
+   height: 50px;
+   background-color: #00AFDB;
+}
+#Download .container .store .btn-store .store-icon {
+   width: 60px;
+   height: 50px;
+   background-color: #009CC2;
+}
+#Download .container .store .btn-store .store-name {
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 53px;
+   text-align: center;
+   text-transform: uppercase;
+   color: #FFFFFF;
+}
+#Download .container .store .btn-store .store-icon {
+   line-height: 60px;
+}
+
+/* Footer */
+
+Footer {
+   height: 184px;
+   background-color: #000000;
+}
+.wrapper-footer {
+   width: 1278px;
+}
