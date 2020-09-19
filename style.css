@@ -1,0 +1,52 @@
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: black;
+}
+.container {
+   width: 1062px;
+   margin: 0 auto;
+}
+header nav {
+   width: 581px;
+   margin: 0 auto;
+   position: relative;
+   left: -7px;
+}
+header nav ul {
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+   padding: 23px 0;
+   
+}
+header nav ul .logo {
+   position: relative;
+   top: -14px;
+}
+header nav ul li a {
+   font-size: 14px;
+   color: #ffffff;
+   text-decoration: none;
+   line-height: 140%;
+   opacity: 0.8;
+}
+header nav ul li a:hover {
+   opacity: 1;
+   border-bottom: 1px solid #ffffff;
+}
+header nav ul .logo a:hover {
+   opacity: 1;
+   border: none;
+}
+header nav ul li .active {
+   opacity: 1;
+   border-bottom: 1px solid #ffffff;
+}
+header nav ul li:nth-child(2) {
+   position: relative;
+   left: -7px;
+}
+header nav ul li:nth-child(4) {
+   position: relative;
+   left: 9px;
+}
