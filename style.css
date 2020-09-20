@@ -240,7 +240,7 @@ header nav ul li:nth-child(4) {
 /* Subscribe */
 
 #Subscribe {
-   height: 598px;
+   height: 524px;
    background: url('./assets/pexels-christina-morillo-1181675\ 1.jpg');
 }
 #Subscribe .container h2 {
@@ -251,7 +251,7 @@ header nav ul li:nth-child(4) {
    letter-spacing: 1px;
    text-transform: uppercase;
    color: #FFFFFF;
-   padding-top: 217px;
+   padding-top: 200px;
 }
 #Subscribe .container .inputMail {
    display: flex;
@@ -317,8 +317,8 @@ header nav ul li:nth-child(4) {
    padding-bottom: 180px;
 }
 #Download .container .store .btn-store {
-   width: 188px;
-   height: 50px;
+   width: 186px;
+   height: 46px;
    display: flex;
    padding: 0;
    border: none;
@@ -335,33 +335,95 @@ header nav ul li:nth-child(4) {
    transform: scale(1.2);
 }
 #Download .container .store .btn-store .store-name {
-   width: 128px;
-   height: 50px;
+   width: 127px;
+   height: 46px;
    background-color: #00AFDB;
 }
 #Download .container .store .btn-store .store-icon {
-   width: 60px;
-   height: 50px;
+   width: 59px;
+   height: 46px;
    background-color: #009CC2;
 }
 #Download .container .store .btn-store .store-name {
    font-weight: bold;
    font-size: 14px;
-   line-height: 53px;
+   line-height: 47px;
    text-align: center;
    text-transform: uppercase;
    color: #FFFFFF;
 }
 #Download .container .store .btn-store .store-icon {
-   line-height: 60px;
+   line-height: 55px;
 }
 
 /* Footer */
 
-Footer {
+footer {
    height: 184px;
    background-color: #000000;
 }
 .wrapper-footer {
    width: 1278px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
 }
+footer .wrapper-footer .copyright {
+   font-size: 14px;
+   line-height: 140%;
+   text-align: center;
+   color: #818181;
+}
+footer .wrapper-footer nav {
+   padding-top: 58px;
+}
+footer .wrapper-footer nav ul {
+   display: flex;
+   list-style: none;
+   padding: 0;
+}
+footer .wrapper-footer nav ul li {
+   display: flex;
+}
+footer .wrapper-footer nav ul li a {
+   text-decoration: none;
+   font-size: 14px;
+   line-height: 140%;
+   color: #FFFFFF;
+   opacity: 0.8;
+}
+footer .wrapper-footer nav ul li a:hover {
+   opacity: 1;
+   border-bottom: 1px solid #ffffff;
+}
+footer .wrapper-footer nav ul li:not(:first-child) a {
+   margin: 0 19px;
+}
+footer .wrapper-footer nav ul li:first-child a {
+   margin-right: 19px;
+}
+footer .wrapper-footer nav ul li:not(:last-child)::after {
+   content: '';
+   display: block;
+   margin: auto 0;
+   height: 8px;
+   width: 1px;
+   border-left: 1px solid #4E4E4E;
+}
+footer .wrapper-footer .logo {
+   position: relative;
+   padding-top: 60px;
+}
+footer .wrapper-footer .logo img {
+   position: relative;
+   left: -42px;
+   opacity: 0.8;
+   cursor: pointer;
+}
+footer .wrapper-footer .logo img:hover {
+   opacity: 1;
+}
+footer .wrapper-footer .copyright {
+   padding-top: 74px;
+}
+
