@@ -32,6 +32,13 @@ squareBtn.addEventListener('click', () => {
    square();
 })
 
+deleteBtn.addEventListener('click', () => {
+   if(currentNumber) {
+      currentNumber = currentNumber.slice(0, currentNumber.length-1);
+      currentOperand.innerText = currentNumber;
+   }
+})
+
 resultBtn.addEventListener('click', () => {
    isBtnResult = true;
    if(currentOperator) {
@@ -76,7 +83,8 @@ const addOperator = (operator) => {
    }
    if(previousOperator && previousOperator!== operator) {
       previousOperator = operator;
-      previousNumber = previousNumber.slice(0, previousNumber.length-1) + previousOperator;
+      let index = previousNumber.indexOf(' ');
+      previousNumber = previousNumber.slice(0, index) + previousOperator;
       previousOperand.innerText = previousNumber;
       
    }
@@ -122,6 +130,7 @@ const compute = () => {
    }
    const prev = parseFloat(previousNumber);
    const current = parseFloat(currentNumber);
+   console.log(previousOperator)
    switch (previousOperator) {
       case '+':
         computation = prev + current;
@@ -134,6 +143,10 @@ const compute = () => {
         break
       case '÷':
         computation = prev / current;
+        break
+      case 'x²':
+        computation = Math.pow(prev, current);
+        console.log(computation)
         break
       default:
          break;
