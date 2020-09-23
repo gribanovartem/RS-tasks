@@ -5,9 +5,12 @@ const deleteBtn = document.querySelector('[data-delete]');
 const clearBtn = document.querySelector('[data-all-clear]');
 const previousOperand = document.querySelector('[data-previous-operand]');
 const currentOperand = document.querySelector('[data-current-operand]');
+const exponentBtn = document.querySelector('[data-exponent]');
+const squareBtn = document.querySelector('[data-square]');
 
 let currentNumber, previousNumber, previousOperator, currentOperator;
 let isBtnResult = false;
+let isSquare = false;
 
 buttons.forEach((item) => {
    item.addEventListener('click', (e) => {
@@ -25,6 +28,10 @@ clearBtn.addEventListener('click', () => {
    clear();
 })
 
+squareBtn.addEventListener('click', () => {
+   square();
+})
+
 resultBtn.addEventListener('click', () => {
    isBtnResult = true;
    if(currentOperator) {
@@ -40,58 +47,78 @@ const addNumber = (number) => {
 }
 
 const addOperator = (operator) => {
+   
    if(currentOperator) {
       previousOperator = currentOperator;
+      
    }
    currentOperator = operator;
    if(isBtnResult) {
       previousNumber = previousNumber + ' ' + previousOperator
       previousOperand.innerText = previousNumber;
       isBtnResult = false;
+      
    } else if(previousOperator) {
       compute();
-   } else {
+      console.log('dfhgdfghdfghdfhgdfhdfh')
+   } else if(currentNumber) {
       previousNumber = currentNumber + ' ' + currentOperator;
       currentNumber = '';
       currentOperand.innerText = currentNumber;
       previousOperand.innerText = previousNumber;
+      
+   } else {
+      previousNumber = previousNumber + ' ' + currentOperator;
+      currentNumber = '';
+      currentOperand.innerText = currentNumber;
+      previousOperand.innerText = previousNumber;
+      
    }
    if(previousOperator && previousOperator!== operator) {
       previousOperator = operator;
       previousNumber = previousNumber.slice(0, previousNumber.length-1) + previousOperator;
       previousOperand.innerText = previousNumber;
+      
    }
+   console.log(previousNumber)
 }
 
 const compute = () => {
+   
    let computation;
    let isDecimalNum = false;
    let indexToFixed = null;
-   if(previousNumber.indexOf('.', 0)!== -1) {
-      isDecimalNum = true;
+   if(previousNumber) {
+      let prev = previousNumber.toString()
+      if(prev.indexOf('.', 0)!== -1) {
+         isDecimalNum = true;
+      }
+      
    }
-   if(currentNumber.indexOf('.', 0)!== -1) {
+   if(currentNumber && currentNumber.indexOf('.', 0)!== -1) {
       isDecimalNum = true;
    }
    if(isDecimalNum) {
       let prev = previousNumber;
       let current = currentNumber;
       if(previousNumber.indexOf(' ', 0)!== -1) {
-         prev = prev.substr(previousNumber.indexOf(' ', 0), 2);
+         prev = prev.substr(0, previousNumber.indexOf(' ', 0));
       }
       if(currentNumber.indexOf(' ', 0)!== -1) {
-         current = current.substr(currentNumber.indexOf(' ', 0), 2);
+         current = current.substr(0, currentNumber.indexOf(' ', 0));
       }
-      let prevDecimalIndex = prev.indexOf('.', 0) + 1;
-      let curDecimalIndex = current.indexOf('.', 0) + 1;
+      let prevDecimalIndex = prev.length - prev.indexOf('.', 0) - 1;
+      let curDecimalIndex = current.length - current.indexOf('.', 0) - 1;
       if(prevDecimalIndex > curDecimalIndex) {
-         indexToFixed = prev.length - prevDecimalIndex;
+         indexToFixed = prevDecimalIndex;
       } else if(prevDecimalIndex < curDecimalIndex) {
-         indexToFixed = current.length - curDecimalIndex;
+         indexToFixed = curDecimalIndex;
       } else {
-         indexToFixed = prev.length - prevDecimalIndex;
-         console.log(indexToFixed, previousNumber, prevDecimalIndex)
+         indexToFixed = prevDecimalIndex;
       }
+   }
+   if(!previousOperator) {
+      previousOperator = currentOperator;
    }
    const prev = parseFloat(previousNumber);
    const current = parseFloat(currentNumber);
@@ -109,15 +136,16 @@ const compute = () => {
         computation = prev / current;
         break
       default:
-        return;
+         break;
    }
    if(isDecimalNum) {
       computation = computation.toFixed(indexToFixed);
    }
    currentNumber = '';
    currentOperand.innerText = currentNumber;
-   previousNumber = isBtnResult ? computation : computation + ' ' + previousOperator;
+   previousNumber = isBtnResult || isSquare ? computation : computation + ' ' + previousOperator;
    previousOperand.innerText = previousNumber;
+   console.log('prevnum - ' + previousNumber)
 }
 
 const clear = () => {
@@ -128,4 +156,26 @@ const clear = () => {
    isBtnResult = false;
    previousOperand.innerText = previousNumber;
    currentOperand.innerText = currentNumber;
+}
+
+const square = () => {
+   isSquare = true;
+   if(!previousNumber && currentNumber) {
+      previousNumber = Math.sqrt(parseFloat(currentNumber));
+      currentNumber = '';
+      currentOperand.innerText = currentNumber;
+      previousOperand.innerText = previousNumber;
+   } else if (previousNumber && !currentNumber) {
+      previousNumber = Math.sqrt(parseFloat(previousNumber));
+      currentNumber = '';
+      currentOperand.innerText = currentNumber;
+      previousOperand.innerText = previousNumber;
+   } else if(previousNumber && currentNumber) {
+      compute();
+      currentNumber = null;
+      square();
+   }
+   isSquare = false;
+   previousOperator = null;
+   currentOperator = null;
 }
