@@ -11,6 +11,8 @@ const squareBtn = document.querySelector('[data-square]');
 let currentNumber, previousNumber, previousOperator, currentOperator;
 let isBtnResult = false;
 let isSquare = false;
+let isNegativeNumber = false;
+let isWrongEnter = false;
 
 buttons.forEach((item) => {
    item.addEventListener('click', (e) => {
@@ -33,6 +35,11 @@ squareBtn.addEventListener('click', () => {
 })
 
 deleteBtn.addEventListener('click', () => {
+   if(isWrongEnter) {
+      clear();
+      isWrongEnter = false;
+      return;
+   }
    if(currentNumber) {
       currentNumber = currentNumber.slice(0, currentNumber.length-1);
       currentOperand.innerText = currentNumber;
@@ -40,6 +47,11 @@ deleteBtn.addEventListener('click', () => {
 })
 
 resultBtn.addEventListener('click', () => {
+   if(isWrongEnter) {
+      clear();
+      isWrongEnter = false;
+      return;
+   }
    isBtnResult = true;
    if(currentOperator) {
       previousOperator = currentOperator;
@@ -47,48 +59,66 @@ resultBtn.addEventListener('click', () => {
    if(previousOperator) {
       compute();
    }
+   currentOperator = null;
 })
 const addNumber = (number) => {
-   currentNumber = (currentNumber) ? currentNumber + number : number;
+   if(isWrongEnter) {
+      clear();
+      isWrongEnter = false;
+      return;
+   }
+   if(isNegativeNumber) {
+      currentNumber = '-' + number;
+      isNegativeNumber = false;
+   } else {
+      currentNumber = (currentNumber) ? currentNumber + number : number;
+   }
    currentOperand.innerText = currentNumber;
 }
 
 const addOperator = (operator) => {
-   
-   if(currentOperator) {
-      previousOperator = currentOperator;
-      
+   if(isWrongEnter) {
+      clear();
+      isWrongEnter = false;
+      return;
    }
-   currentOperator = operator;
-   if(isBtnResult) {
-      previousNumber = previousNumber + ' ' + previousOperator
-      previousOperand.innerText = previousNumber;
-      isBtnResult = false;
-      
-   } else if(previousOperator) {
-      compute();
-      console.log('dfhgdfghdfghdfhgdfhdfh')
-   } else if(currentNumber) {
-      previousNumber = currentNumber + ' ' + currentOperator;
-      currentNumber = '';
-      currentOperand.innerText = currentNumber;
-      previousOperand.innerText = previousNumber;
-      
+   if((currentOperator && operator==='-') || (operator==='-' && !previousNumber && !currentNumber)) {
+      isNegativeNumber = true;
+      console.log('gggggggggggggggggg')
    } else {
-      previousNumber = previousNumber + ' ' + currentOperator;
-      currentNumber = '';
-      currentOperand.innerText = currentNumber;
-      previousOperand.innerText = previousNumber;
-      
+      if(currentOperator) {
+         previousOperator = currentOperator;
+      }
+      currentOperator = operator;
+      if(isBtnResult) {
+         previousNumber = previousNumber + ' ' + previousOperator
+         previousOperand.innerText = previousNumber;
+         isBtnResult = false;
+         
+      } else if(previousOperator) {
+         compute();
+      } else if(currentNumber) {
+         previousNumber = currentNumber + ' ' + currentOperator;
+         currentNumber = '';
+         currentOperand.innerText = currentNumber;
+         previousOperand.innerText = previousNumber;
+         
+      } else {
+         previousNumber = previousNumber + ' ' + currentOperator;
+         currentNumber = '';
+         currentOperand.innerText = currentNumber;
+         previousOperand.innerText = previousNumber;
+         
+      }
+      if(previousOperator && previousOperator!== operator) {
+         previousOperator = operator;
+         let index = previousNumber.indexOf(' ');
+         previousNumber = previousNumber.slice(0, index) + previousOperator;
+         previousOperand.innerText = previousNumber;
+         
+      }
    }
-   if(previousOperator && previousOperator!== operator) {
-      previousOperator = operator;
-      let index = previousNumber.indexOf(' ');
-      previousNumber = previousNumber.slice(0, index) + previousOperator;
-      previousOperand.innerText = previousNumber;
-      
-   }
-   console.log(previousNumber)
+   
 }
 
 const compute = () => {
@@ -130,7 +160,6 @@ const compute = () => {
    }
    const prev = parseFloat(previousNumber);
    const current = parseFloat(currentNumber);
-   console.log(previousOperator)
    switch (previousOperator) {
       case '+':
         computation = prev + current;
@@ -158,7 +187,6 @@ const compute = () => {
    currentOperand.innerText = currentNumber;
    previousNumber = isBtnResult || isSquare ? computation : computation + ' ' + previousOperator;
    previousOperand.innerText = previousNumber;
-   console.log('prevnum - ' + previousNumber)
 }
 
 const clear = () => {
@@ -172,8 +200,19 @@ const clear = () => {
 }
 
 const square = () => {
+   if(isWrongEnter) {
+      clear();
+      isWrongEnter = false;
+      return;
+   }
    isSquare = true;
-   if(!previousNumber && currentNumber) {
+   if(parseFloat(currentNumber)<0) {
+      previousNumber = 'Введены неверные данные';
+      currentNumber = '';
+      currentOperand.innerText = currentNumber;
+      previousOperand.innerText = previousNumber;
+      isWrongEnter = true;
+   } else if(!previousNumber && currentNumber) {
       previousNumber = Math.sqrt(parseFloat(currentNumber));
       currentNumber = '';
       currentOperand.innerText = currentNumber;
