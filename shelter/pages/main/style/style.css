@@ -1,0 +1,70 @@
+.header {
+  height: 60px;
+  padding-top: 60px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__title h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 3.2rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+.logo__text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  padding: 9px 0 0 4px;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #CDCDCD;
+  text-decoration: none;
+}
+
+.navigation__list {
+  padding-top: 16px;
+}
+.navigation__list > li:not(:first-child) a {
+  padding-left: 36px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper-for-bg {
+  background: url(https://s3-alpha-sig.figma.com/img/3f10/d485/95577108af837b8b441616746225b66e?Expires=1601856000&Signature=N-8U2ay30I4DLt1uLqj1ZCaIBfdQdNhQnu7hTRD09v2ze1GMrtwlN8ojJChfUpb9VvOnk~QDTNwplOxyFfcnz8LyDFkxpRSEDtEeOUCUcp~MiQ-a7wy3bqUco4j-CefaZpiQeIHtmpdVJsbnOjk27OA3DnedPzAh1yY0zF-pnGQtvpQZgGbCEPg8mkGspU0bIuIWM-wFTWUAybsNl2nxoaoTWEyCznrxH523YbKDx7v0Zf2BxKg8Yk~HB1oaUMye4~p97PKVwhX-~wh5Xf6WjQmN5qCAKt29o5OFaUNsbpSTf2qHTrNWixaO8lQyK2-5jXLNf9bMHfwqBos3YARBzQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
