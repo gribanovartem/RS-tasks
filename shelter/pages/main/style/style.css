@@ -167,6 +167,14 @@ h4 {
   letter-spacing: 0.06em;
 }
 
+h5 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
 .pets {
   background: #F6F6F6;
 }
@@ -289,6 +297,72 @@ h4 {
 
 .help {
   padding-bottom: 100px;
+}
+
+.donation {
+  background: #F6F6F6;
+  padding-bottom: 101px;
+}
+
+.donation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 81px;
+}
+
+.donation__content {
+  max-width: 380px;
+  margin-right: 142px;
+}
+
+.donation__image {
+  margin-left: 142px;
+  padding-top: 10px;
+}
+
+.donation__title {
+  text-align: start;
+  color: #545454;
+}
+
+.donation__subtitle {
+  color: #545454;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.donation__credit {
+  width: 30px;
+}
+
+.donation__link {
+  max-width: 349px;
+  height: 43px;
+  background: #F1CDB3;
+  border-radius: 9px;
+  border: none;
+  color: #545454;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.donation__link:hover {
+  background: #FDDCC4;
+}
+
+.donation__credit,
+.donation__link h4 {
+  margin: 0 7.5px;
+}
+
+.donation__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: #B2B2B2;
+  padding-top: 20px;
 }
 
 html {
