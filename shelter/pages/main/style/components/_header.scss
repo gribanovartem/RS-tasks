@@ -6,7 +6,7 @@
    display: flex;
    justify-content: space-between;
 }
-.logo__title h2 {
+.logo__title h1 {
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-weight: normal;
    font-size: 3.2rem;
@@ -35,10 +35,16 @@
    align-items: center;
    color: #CDCDCD;
    text-decoration: none;
+   &_active {
+      border-bottom: 3px solid $color-primary;
+   }
+   &:hover {
+      color: $color-light-s;
+   }
 }
 .navigation__list {
    padding-top: 16px;
-      &>li:not(:first-child) a {
+      &>li:not(:first-child) {
          padding-left: 36px;
       }
 } 

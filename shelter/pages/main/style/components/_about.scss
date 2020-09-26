@@ -1,0 +1,20 @@
+.about__wrapper {
+   display: flex;
+   justify-content: center;
+   padding-top: 77px;
+   padding-bottom: 98px;
+}
+.about__content {
+   max-width: 430px;
+   padding-top: 15px;
+   h3 {
+      color: $color-dark-l;
+   }
+}
+.about__text {
+   color: $color-dark-xl;
+   padding-top: 24px;
+}
+.about__image {
+   padding-right: 120px;
+}

@@ -1,3 +1,28 @@
-// .start-screen {
-   
-// }
+.start-screen__wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+.start-screen__content {
+   max-width: 460px;
+}
+.start-screen__title {
+   font-family: $text-georgia;
+   font-weight: normal;
+   font-size: 4.4rem;
+   line-height: 130%;
+   color: $color-light-xl;
+   padding-top: 224px;
+}
+.start-screen__text {
+   font-family: $text-arial;
+   font-weight: normal;
+   font-size: 1.5rem;
+   line-height: 160%;
+   color: $color-dark-s;
+   padding-top: 41px;
+   padding-bottom: 41px;
+}
+.start-screen__image img {
+   width: 100%;
+   padding-top: 60px;
+}
