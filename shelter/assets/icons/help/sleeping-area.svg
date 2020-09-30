@@ -7,3 +7,39 @@
   <path d="M221.044 325.686l-14.854-6.806a9.985 9.985 0 00-8.33 0l-14.855 6.806c-5.021 2.3-7.227 8.235-4.926 13.256a9.998 9.998 0 0013.256 4.926l10.689-4.897 10.689 4.897c5.018 2.303 10.956.095 13.256-4.926 2.302-5.021.095-10.957-4.925-13.256z" data-original="#000000" class="active-path" data-old_color="#f1cdb3" fill="#f1cdb3"/>
   <path d="M328.995 325.685l-14.854-6.806a9.989 9.989 0 00-8.33 0l-14.854 6.806c-5.021 2.3-7.227 8.235-4.926 13.256 2.301 5.023 8.236 7.23 13.256 4.926l10.689-4.897 10.689 4.897a9.956 9.956 0 004.159.911c3.79 0 7.415-2.166 9.097-5.837 2.301-5.021.096-10.956-4.926-13.256z" data-original="#000000" class="active-path" data-old_color="#f1cdb3" fill="#f1cdb3"/>
 </svg>
+
+
+const CustomError = require("../extensions/custom-error");
+
+module.exports = function transform(arr) {
+  if(Array.isArray(arr) !== 'array') {
+    throw new Error(err);
+  }
+  let newArr = [];
+  for(let i=0; i<arr.length; i++) {
+    switch (arr[i]) {
+      case '--discard-next':
+        i++;
+        break;
+      case '--discard-prev':
+        if(newArr.length!==0) {
+          newArr.pop();
+        }
+        break;
+      case '--double-next':
+        if(arr[i+1]) {
+          newArr.push(arr[i+1]);
+        }
+      break;
+      case '--double-prev':
+        if(newArr.length!==0) {
+          newArr.push(arr[i-1]);
+        }
+      break;
+      default:
+        newArr.push(arr[i]);
+        break;
+    }
+  }
+  return newArr;
+};

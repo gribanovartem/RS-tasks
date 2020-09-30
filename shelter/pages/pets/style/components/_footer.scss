@@ -5,7 +5,7 @@
 .footer-wrapper {
    display: flex;
    justify-content: space-between;
-   padding-top: 40px;
+   padding-top: 34px;
    flex-wrap: wrap;
 }
 .footer__title {
@@ -32,8 +32,8 @@
 .footer__location {
    width: 302px;
 }
-.footer__location {
-   width: 302px;
+.footer__location a {
+   text-decoration: none;
 }
 .footer__mail,
 .footer__phone {
