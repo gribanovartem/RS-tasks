@@ -1,6 +1,7 @@
 .layout-5 {
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
 }
 .layout-4 {
    display: flex;
@@ -8,6 +9,7 @@
    padding-top: 56px;
    max-width: 856px;
    margin: 0 auto;
+   flex-wrap: wrap;
 }
 .help__list {
    max-width: 1026px;

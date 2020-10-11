@@ -120,6 +120,7 @@
 
 .about__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-top: 77px;
   padding-bottom: 98px;
@@ -262,6 +263,7 @@ h5 {
 .layout-5 {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .layout-4 {
@@ -270,6 +272,7 @@ h5 {
   padding-top: 56px;
   max-width: 856px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .help__list {
@@ -366,13 +369,14 @@ h5 {
 }
 
 .footer {
-  background: url(noise_lines_transparent@2X), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(https://s3-alpha-sig.figma.com/img/3f10/d485/95577108af837b8b441616746225b66e?Expires=1601856000&Signature=N-8U2ay30I4DLt1uLqj1ZCaIBfdQdNhQnu7hTRD09v2ze1GMrtwlN8ojJChfUpb9VvOnk~QDTNwplOxyFfcnz8LyDFkxpRSEDtEeOUCUcp~MiQ-a7wy3bqUco4j-CefaZpiQeIHtmpdVJsbnOjk27OA3DnedPzAh1yY0zF-pnGQtvpQZgGbCEPg8mkGspU0bIuIWM-wFTWUAybsNl2nxoaoTWEyCznrxH523YbKDx7v0Zf2BxKg8Yk~HB1oaUMye4~p97PKVwhX-~wh5Xf6WjQmN5qCAKt29o5OFaUNsbpSTf2qHTrNWixaO8lQyK2-5jXLNf9bMHfwqBos3YARBzQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+  flex-wrap: wrap;
 }
 
 .footer__title {
@@ -399,6 +403,10 @@ h5 {
 
 .footer__phone {
   padding-top: 32px;
+}
+
+.footer__location {
+  width: 302px;
 }
 
 .footer__location {
@@ -441,6 +449,61 @@ h5 {
   color: #FDDCC4;
 }
 
+@media screen and (max-width: 990px) {
+  .header {
+    padding-top: 30px;
+  }
+
+  .header__wrapper {
+    display: flex;
+    padding: 0 30px;
+  }
+
+  .start-screen__title {
+    padding-top: 60px;
+  }
+
+  .start-screen__content {
+    margin: 0 auto;
+  }
+  .start-screen__contentbutton {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .start-screen__text {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .start-screen__image img {
+    width: 74%;
+    padding-top: 100px;
+    padding-left: 140px;
+  }
+
+  .start-screen__wrapper {
+    flex-direction: column;
+  }
+
+  .donation-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .donation__image {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .donation__image img {
+    width: 250px;
+  }
+
+  .slider {
+    flex-wrap: wrap;
+  }
+}
 html {
   font-size: 10px;
 }

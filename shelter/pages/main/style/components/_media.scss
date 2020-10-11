@@ -1,0 +1,49 @@
+@media screen and (max-width: 990px) {
+   // Header
+
+   .header {
+      padding-top: 30px;
+   }
+   .header__wrapper {
+      display: flex;
+      padding: 0 30px;
+   }
+   // Start screen
+   .start-screen__title {
+      padding-top: 60px;
+   }
+   .start-screen__content {
+      margin: 0 auto;
+      &button {
+         display: block;
+         margin: 0 auto;
+      }
+   }
+   .start-screen__text {
+      padding-top: 42px;
+      padding-bottom: 42px;
+   }
+   .start-screen__image img {
+      width: 74%;
+      padding-top: 100px;
+      padding-left: 140px;
+   }
+   .start-screen__wrapper {
+      flex-direction: column;
+      
+   }
+   .donation-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .donation__image {
+      margin-left: 0;
+      padding-top: 0;
+   }
+   .donation__image img {
+      width: 250px;
+   }
+   .slider {
+      flex-wrap: wrap;
+   }
+}
