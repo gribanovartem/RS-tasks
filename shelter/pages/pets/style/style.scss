@@ -4,6 +4,7 @@
 @import './basic/text';
 @import './components/footer';
 @import './components/pets';
+@import './components/media768';
 
 html {
    font-size: 10px;
@@ -19,10 +20,3 @@ body {
    max-width: 1200px;
    margin: 0 auto;
 }
-// .wrapper-for-bg {
-//    background: url(https://s3-alpha-sig.figma.com/img/3f10/d485/95577108af837b8b441616746225b66e?Expires=1601856000&Signature=N-8U2ay30I4DLt1uLqj1ZCaIBfdQdNhQnu7hTRD09v2ze1GMrtwlN8ojJChfUpb9VvOnk~QDTNwplOxyFfcnz8LyDFkxpRSEDtEeOUCUcp~MiQ-a7wy3bqUco4j-CefaZpiQeIHtmpdVJsbnOjk27OA3DnedPzAh1yY0zF-pnGQtvpQZgGbCEPg8mkGspU0bIuIWM-wFTWUAybsNl2nxoaoTWEyCznrxH523YbKDx7v0Zf2BxKg8Yk~HB1oaUMye4~p97PKVwhX-~wh5Xf6WjQmN5qCAKt29o5OFaUNsbpSTf2qHTrNWixaO8lQyK2-5jXLNf9bMHfwqBos3YARBzQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA),
-//                radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 50%),
-//                #211F30;
-               
-//    width: 100%;
-// }

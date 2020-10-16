@@ -1,0 +1,36 @@
+@media screen and (max-width: 1280px) {
+   // Header
+   .header {
+      .header__wrapper {
+         max-width: 92%;
+      }
+   }
+
+   //  Pets
+   .pets {
+      .wrapper {
+         max-width: 580px;
+      }
+   }
+   .pets__cards {
+      padding-top: 30px;
+   }
+   .card:last-child,
+   .card:nth-child(7) {
+      display: none;
+   }
+   .pets__buttons {
+      padding-top: 8px;
+      padding-bottom: 77px;
+   }
+
+   // Footer
+
+   .footer-wrapper {
+      justify-content: space-evenly;
+      padding-top: 10px;
+   }
+   .footer__image {
+      padding-top: 56px;
+   }
+}
