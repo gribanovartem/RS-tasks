@@ -55,6 +55,10 @@
   padding-left: 36px;
 }
 
+.navigation__burger {
+  display: none;
+}
+
 .start-screen__wrapper {
   display: flex;
   justify-content: space-between;
@@ -236,11 +240,15 @@ h5 {
 .card:nth-child(3) {
   margin: 0 35px;
 }
+.card:nth-child(4) img {
+  padding-left: 30px;
+  padding-top: 43px;
+}
 .card__image {
   display: block;
   margin: 0 auto;
-  padding-top: 30px;
-  height: 240px;
+  padding-top: 38px;
+  padding-left: 12px;
 }
 .card__btn {
   display: block;
@@ -259,6 +267,10 @@ h5 {
 }
 .card:hover {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.card .image__wrapper {
+  width: 270px;
+  height: 270px;
 }
 
 .layout-5 {
@@ -479,7 +491,7 @@ h5 {
   color: #FDDCC4;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .header {
     padding-top: 30px;
   }
@@ -611,6 +623,220 @@ h5 {
 
   .footer__image {
     padding-top: 56px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 2.5rem;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -43px;
+  }
+
+  .navigation__list {
+    display: none;
+  }
+
+  .header .header__wrapper {
+    max-width: 94%;
+    padding: 0;
+  }
+
+  .navigation__burger {
+    display: block;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .burger__line {
+    width: 30px;
+    height: 2px;
+    background-color: #F1CDB3;
+  }
+
+  .start-screen__image img {
+    width: 81%;
+    padding-top: 105px;
+    padding-left: 50px;
+  }
+
+  .start-screen__title {
+    font-size: 2.5rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .start-screen__text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+  .about__wrapper {
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
+
+  .about__content {
+    max-width: 84%;
+  }
+  .about__content h3 {
+    text-align: center;
+  }
+  .about__content p {
+    text-align: justify;
+  }
+
+  .about__image {
+    padding-top: 39px;
+  }
+  .about__image img {
+    width: 87%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .pets__title {
+    padding-top: 42px;
+  }
+
+  .card:nth-child(3) {
+    display: none;
+  }
+
+  .slider {
+    justify-content: center;
+    position: relative;
+    padding-top: 42px;
+    padding-bottom: 114px;
+  }
+
+  .arrow:first-child {
+    position: absolute;
+    top: 497px;
+    left: 21.3%;
+  }
+
+  .arrow:last-child {
+    position: absolute;
+    top: 497px;
+    right: 21.2%;
+  }
+
+  .pets__button {
+    padding-bottom: 42px;
+  }
+
+  .help {
+    padding-bottom: 12px;
+  }
+
+  .help__title {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .layout-5 {
+    justify-content: flex-start;
+  }
+  .layout-5 .help__item {
+    width: 50%;
+    padding-bottom: 30px;
+  }
+
+  .help__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .help__item-title {
+    padding-top: 20px;
+  }
+
+  .donation {
+    padding-bottom: 42px;
+  }
+
+  .donation__title {
+    text-align: center;
+  }
+
+  .donation .donation-wrapper {
+    padding-top: 42px;
+    margin: 0 auto;
+    max-width: 87%;
+  }
+
+  .donation__image img {
+    width: 94%;
+    padding-top: 31px;
+  }
+
+  .donation__subtitle {
+    letter-spacing: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .donation__text {
+    text-align: justify;
+  }
+
+  .footer__title h3 {
+    text-align: center;
+  }
+  .footer__title h3 br {
+    display: none;
+  }
+
+  .footer-wrapper {
+    padding-top: 9px;
+  }
+
+  .footer__mail,
+.footer__phone {
+    justify-content: center;
+  }
+  .footer__mail h4,
+.footer__phone h4 {
+    font-size: 2rem;
+  }
+
+  .footer__location {
+    width: 294px;
+  }
+  .footer__location .footer__title h3 {
+    padding-top: 15px;
+  }
+
+  .footer__city-primary,
+.footer__city-secondary {
+    padding-top: 40px;
+  }
+  .footer__city-primary h4,
+.footer__city-secondary h4 {
+    font-size: 2rem;
+  }
+
+  .footer__image {
+    padding-top: 38px;
+  }
+  .footer__image img {
+    width: 87%;
+    display: block;
+    margin: 0 auto;
   }
 }
 html {
