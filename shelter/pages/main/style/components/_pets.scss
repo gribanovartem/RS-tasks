@@ -33,6 +33,7 @@
    transform: rotate(-180deg);
 }
 .slider  {
+   position: relative;
    display: flex;
    justify-content: space-between;
    padding-top: 59px;
@@ -43,26 +44,45 @@
       justify-content: space-between;
    }
 }
+.card.active,
+.card.next {
+   display: block;
+}
+.card.next {
+   position: absolute;
+   width: 270px;
+   height: 435px;
+   right: -250px;
+}
+.carousel {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   overflow: hidden;
+}
+
+.first {
+   order: 1;
+}
+.second {
+   order: 2;
+}
+.third {
+   order: 3;
+}
 .card {
+   animation: 0.4s ease-in-out;
+   position: relative;
+   display: none;
    width: 270px;
    height: 435px;
    background: #FAFAFA;
    border-radius: 9px;
+   margin: 0px 45px;
    cursor: pointer;
-   &:nth-child(3) {
-      margin: 0 35px;
-   }
-   &:nth-child(4) {
-      img {
-         padding-left: 30px;
-         padding-top: 43px;
-      }
-   }
    &__image {
       display: block;
       margin: 0 auto;
-      padding-top: 38px;
-      padding-left: 12px;
    }
    &__btn {
       display: block;
@@ -85,5 +105,57 @@
    .image__wrapper {
       width: 270px;
       height: 270px;
+   }
+}
+.next {
+   display: block;
+   position: absolute;
+}
+.previous {
+   display: block;
+   position: absolute;
+}
+.to-left {
+   animation-name: left;
+}
+.to-right {
+   animation-name: to-right;
+}
+.from-left {
+   animation-name: from-left;
+}
+.from-right {
+   animation-name: right;
+}
+@keyframes left {
+   from {
+      left: 0;
+   }
+   to {
+      left: -33.3%;
+   }
+}
+@keyframes right {
+   from {
+      left: 100%;
+   }
+   to {
+      left: 66.6%;
+   }
+}
+@keyframes to-right {
+   from {
+      left: 0;
+   }
+   to {
+      left: 33.3%;
+   }
+}
+@keyframes from-left {
+   from {
+      left: -33.3%;
+   }
+   to {
+      left: 0;
    }
 }

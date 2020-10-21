@@ -8,9 +8,13 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
       <link rel="stylesheet" href="./style/style.css" />
       <title>shelter</title>
+      <script src="./getPets.js"></script>
    </head>
    <body>
-      <div class="wrapper-for-bg">
+      <div class="dark-modal-layer" id="DarkLayer">
+         
+      </div>
+      <div class="wrapper-for-bg" id="startPage">
          <header class="header">
             <div class="wrapper header__wrapper">
                <div class="logo">
@@ -22,13 +26,13 @@
                   </div>
                </div>
                <div class="navigation">
-                  <ul class="navigation__list">
-                     <li><a class="navigation__link navigation__link_active" href="#">About the shelter</a></li>
-                     <li><a class="navigation__link" href="#">Our pets</a></li>
+                  <ul class="navigation__list navigation__list__mobile" id="Menu">
+                     <li><a class="navigation__link navigation__link_active" href="#startPage" id="FirstLink">About the shelter</a></li>
+                     <li><a class="navigation__link" href="../pets/index.html">Our pets</a></li>
                      <li><a class="navigation__link" href="#">Help the shelter</a></li>
                      <li><a class="navigation__link" href="#">Contacts</a></li>   
                   </ul>
-                  <div class="navigation__burger">
+                  <div class="navigation__burger" id="burger">
                      <div class="burger__line"></div>
                      <div class="burger__line"></div>
                      <div class="burger__line"></div>
@@ -82,27 +86,8 @@
                      <path fill="#444" d="M15 7v2H4v2L1 8l3-3v2z"/>
                    </svg>
                </div>
-               <div class="card">
-                  <div class="image__wrapper">
-                     <img class="card__image" src="../../assets/images/pets-cat-katrine.png" alt="Katrine">
-                  </div>
-                 
-                  <div class="card__title">Katrine</div>
-                  <button class="btn btn-bordered card__btn">Learn more</button>
-               </div>
-               <div class="card">
-                  <div class="image__wrapper">
-                     <img class="card__image" src="../../assets/images/pets-dog-jennifer.png" alt="Jennifer">
-                  </div>
-                  <div class="card__title">Jennifer</div>
-                  <button class="btn btn-bordered card__btn">Learn more</button>
-               </div>
-               <div class="card">
-                  <div class="image__wrapper">
-                     <img class="card__image" src="../../assets/images/pets-dog-woody.png" alt="Woody">
-                  </div>
-                  <div class="card__title">Woody</div>
-                  <button class="btn btn-bordered card__btn">Learn more</button>
+               <div class="carousel">
+                  
                </div>
                <div class="arrow arrow-right">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -213,5 +198,7 @@
             </div>
          </div>
       </footer>
+      <script src="./script.js"></script>
+      <script src="./slider.js"></script>
    </body>
 </html>

@@ -31,3 +31,11 @@ body {
                
    width: 100%;
 }
+.dark-modal-layer {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background: #000;
+   opacity: 0;
+   transition: opacity 0.5s;
+}

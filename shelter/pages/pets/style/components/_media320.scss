@@ -8,6 +8,10 @@
 
    // Header
 
+   .logo {
+      position: relative;
+      z-index: 1500;
+   }
    .navigation {
       display: flex;
       align-items: center;
@@ -23,7 +27,6 @@
       }
    }
    .navigation__burger {
-      display: block;
       height: 22px;
       display: flex;
       justify-content: space-between;
@@ -33,6 +36,53 @@
       width: 30px;
       height: 2px;
       background-color: #000000;
+   }
+
+   .navigation__burger {
+      position: absolute;
+      right: 0;
+      z-index: 1000;
+      display: block;
+      height: 22px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      transition: transform 0.5s;
+   }
+   .navigation__burger_active {
+      transform: rotate(90deg);
+      transition: transform 0.5s;
+   }
+   .navigation__list__mobile {
+      background: #fff;
+      width: 320px;
+      height: 822px;
+      position: fixed;
+      top: -16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      right: -800px;
+      transition: right 0.5s;
+      z-index: 1000;
+   }
+   .navigation__link {
+      font-size: 3.2rem;
+      line-height: 160%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      width: fit-content;
+   }
+   .header .navigation__list__mobile {
+      li {
+         padding: 0;
+      }
+   }
+   .navigation__list__mobile_active {
+      right: 0;
+      transition: right 0.5s;
    }
 
    // Pets 

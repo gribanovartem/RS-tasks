@@ -2,6 +2,9 @@
    height: 60px;
    padding-top: 60px;
 }
+.navigation__list__mobile {
+   display: none;
+}
 .header__wrapper {
    display: flex;
    justify-content: space-between;
@@ -50,4 +53,8 @@
 } 
 .navigation__burger {
    display: none;
+}
+.dark-modal-layer {
+   display: none;
+   z-index: 2;
 }
