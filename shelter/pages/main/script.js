@@ -35,4 +35,5 @@ darkLayer.addEventListener('click', () => {
    darkLayer.style.display = 'none';
    darkLayer.style.opacity = '0';
    burgerIsActive = false;
+   hidePopup();
 });

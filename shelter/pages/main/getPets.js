@@ -62,6 +62,9 @@ async function getPets() {
       if(i<countPets) {
          let card = document.createElement('div');
          card.className = 'card active';
+         card.addEventListener('click', (e) => {
+            showPopup(element);
+         });
          const el = `<div class="image__wrapper">
                            <img class="card__image" src=${element.img} alt=${element.name}>
                         </div>
@@ -72,6 +75,9 @@ async function getPets() {
       } else {
          let card = document.createElement('div');
          card.className = 'card inactive';
+         card.addEventListener('click', (e) => {
+            showPopup(element);
+         });
          const el = `<div class="image__wrapper">
                            <img class="card__image" src=${element.img} alt=${element.name}>
                         </div>
@@ -81,6 +87,7 @@ async function getPets() {
          carousel.appendChild(card);
       }
    });
+
 }
 getPets();
 
