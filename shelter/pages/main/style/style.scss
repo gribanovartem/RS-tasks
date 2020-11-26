@@ -8,8 +8,10 @@
 @import './components/help';
 @import './components/donation';
 @import './components/footer';
+@import './components/popup';
 @import './components/media768';
 @import './components/media320';
+
 
 html {
    font-size: 10px;
@@ -38,37 +40,4 @@ body {
    background: #000;
    opacity: 0;
    transition: opacity 0.5s;
-}
-.popup {
-   display: flex;
-   position: fixed;
-   width: 50%;
-   left: 25%;
-   top: 50%;
-   z-index: 1000;
-   background-color: #ffffff;
-   opacity: 0;
-   animation-name: popupHide;
-   animation: popupHide 1s;
-}
-.popup.active {
-   animation-name: popupShow;
-   animation: popupShow 1s;
-   opacity: 1;
-}
-@keyframes popupShow {
-   from {
-      opacity: 0;
-   }
-   to {
-      opacity: 1;
-   }
-}
-@keyframes popupHide {
-   from {
-      opacity: 1;
-   }
-   to {
-      opacity: 0;
-   }
 }

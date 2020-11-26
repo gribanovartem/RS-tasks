@@ -11,10 +11,10 @@ function showPopup(el) {
                         <h4 class="popup__subtitle">${el.type} - ${el.breed}</h4>
                         <p class="popup__description">${el.description}</p>
                         <ul class="popup__list">
-                           <li>Age: ${el.age}</li>
-                           <li>Inoculations: ${el.inoculations}</li>
-                           <li>Diseases: ${el.piseases}</li>
-                           <li>Parasites: ${el.parasites}</li>
+                           <li><span><strong>Age:</strong> ${el.age}</span></li>
+                           <li><span><strong>Inoculations:</strong> ${el.inoculations}</span></li>
+                           <li><span><strong>Diseases:</strong> ${el.diseases}</span></li>
+                           <li><span><strong>Parasites:</strong> ${el.parasites}</span></li>
                         </ul>
                      </div>
                      <div class="popup__button">

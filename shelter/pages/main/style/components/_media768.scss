@@ -153,4 +153,44 @@
    .footer__image {
       padding-top: 56px;
    }
+
+   // Popup
+
+   .popup {
+      width: 630px;
+      height: 350px;
+      left: calc(50% - 315px);
+      top: calc(50% - 175px);
+      &__img {
+         img {
+            height: 350px;
+         }
+      }
+      &__content {
+         margin: 0 0 0 10px;
+         .popup__title {
+            text-align: start;
+            padding-top: 10px;
+         }
+         .popup__subtitle {
+            text-align: start;
+            padding-top: 10px;
+         }
+         .popup__description {
+            padding-top: 20px;
+         }
+         .popup__list {
+            padding-top: 20px;
+            list-style-type: disc;
+            list-style-position: inside;
+            li {
+               color: $color-primary;
+               padding-bottom: 5px;
+               span {
+                  color: #000000;
+               }
+            }
+         }
+      }
+   }
 }
