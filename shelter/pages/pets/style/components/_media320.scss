@@ -26,12 +26,6 @@
          max-width: 94%;
       }
    }
-   .navigation__burger {
-      height: 22px;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-   }
    .burger__line {
       width: 30px;
       height: 2px;
@@ -93,11 +87,10 @@
    .pets__cards {
       justify-content: center;
       padding-top: 42px;
+      flex-direction: column;
    }
-   .card:nth-child(6),
-   .card:nth-child(5),
-   .card:nth-child(4) {
-      display: none;
+   .card {
+      margin: 15px auto;
    }
    .pets__buttons {
       padding-top: 12px;
@@ -142,4 +135,49 @@
          margin: 0 auto;
      }
   }
+
+  // Popup
+
+  .popup {
+   width: 240px;
+   height: auto;
+   left: calc(50% - 120px);
+   top: calc(50% - 170px);
+   &__button {
+      right: -32px;
+      top: -55px;
+   }
+   &__img {
+      display: none;
+   }
+   &__content {
+      margin: 0 10px;
+      .popup__title {
+         text-align: center;
+         padding-top: 10px;
+         font-size: 3.5rem;
+      }
+      .popup__subtitle {
+         text-align: center;
+         padding-top: 10px;
+         font-size: 2rem;
+      }
+      .popup__description {
+         padding-top: 20px;
+         text-align: justify;
+      }
+      .popup__list {
+         padding-top: 20px;
+         list-style-type: disc;
+         list-style-position: inside;
+         li {
+            color: $color-primary;
+            padding-bottom: 5px;
+            span {
+               color: #000000;
+            }
+         }
+      }
+   }
+}
 }

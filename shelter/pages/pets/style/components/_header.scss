@@ -2,7 +2,6 @@
    height: 60px;
    padding-top: 30px;
    padding-bottom: 30px;
-   position: fixed;
    width: 100%;
    background: $color-light-xl;
 }
@@ -55,6 +54,7 @@
 } 
 .navigation__burger {
    display: none;
+   cursor: pointer;
 }
 .dark-modal-layer {
    display: none;

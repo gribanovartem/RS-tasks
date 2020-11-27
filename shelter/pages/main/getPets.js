@@ -52,7 +52,7 @@ function getCountPets() {
    }
 }
 document.addEventListener("DOMContentLoaded", getCountPets);
-window.addEventListener(`resize`, getCountPets, false);
+window.addEventListener('resize', getCountPets, false);
 
 async function getPets() {
    const response = await fetch('../../assets/pets.json');

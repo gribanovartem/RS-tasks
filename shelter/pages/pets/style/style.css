@@ -2,7 +2,6 @@
   height: 60px;
   padding-top: 30px;
   padding-bottom: 30px;
-  position: fixed;
   width: 100%;
   background: #FFFFFF;
 }
@@ -62,6 +61,7 @@
 
 .navigation__burger {
   display: none;
+  cursor: pointer;
 }
 
 .dark-modal-layer {
@@ -298,6 +298,90 @@ h5 {
   line-height: 240%;
 }
 
+.popup {
+  display: flex;
+  position: fixed;
+  width: 900px;
+  height: 500px;
+  left: calc(50% - 450px);
+  top: calc(50% - 250px);
+  z-index: 1000;
+  border-radius: 10px;
+  background-color: #FAFAFA;
+  opacity: 0;
+  animation-name: popupHide;
+  animation: popupHide 0.3s;
+}
+.popup__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -52px;
+  top: -52px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 50px;
+}
+.popup__button:hover {
+  cursor: pointer;
+  background-color: #F1CDB3;
+}
+.popup__img img {
+  height: 500px;
+  border-radius: 10px;
+}
+.popup__content {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.popup__content .popup__title {
+  text-align: start;
+  padding-top: 50px;
+}
+.popup__content .popup__subtitle {
+  text-align: start;
+  padding-top: 10px;
+}
+.popup__content .popup__description {
+  padding-top: 40px;
+}
+.popup__content .popup__list {
+  padding-top: 40px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.popup__content .popup__list li {
+  color: #F1CDB3;
+  padding-bottom: 11px;
+}
+.popup__content .popup__list li span {
+  color: #000000;
+}
+
+.popup.active {
+  animation-name: popupShow;
+  animation: popupShow 0.3s;
+  opacity: 1;
+}
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes popupHide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 1279px) {
   .header .header__wrapper {
     max-width: 92%;
@@ -309,11 +393,6 @@ h5 {
 
   .pets__cards {
     padding-top: 30px;
-  }
-
-  .card:last-child,
-.card:nth-child(7) {
-    display: none;
   }
 
   .pets__buttons {
@@ -328,6 +407,42 @@ h5 {
 
   .footer__image {
     padding-top: 56px;
+  }
+
+  .popup {
+    width: 630px;
+    height: 350px;
+    left: calc(50% - 315px);
+    top: calc(50% - 175px);
+  }
+  .popup__img img {
+    height: 350px;
+  }
+  .popup__content {
+    margin: 0 0 0 10px;
+  }
+  .popup__content .popup__title {
+    text-align: start;
+    padding-top: 10px;
+  }
+  .popup__content .popup__subtitle {
+    text-align: start;
+    padding-top: 10px;
+  }
+  .popup__content .popup__description {
+    padding-top: 20px;
+  }
+  .popup__content .popup__list {
+    padding-top: 20px;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+  .popup__content .popup__list li {
+    color: #F1CDB3;
+    padding-bottom: 5px;
+  }
+  .popup__content .popup__list li span {
+    color: #000000;
   }
 }
 @media screen and (max-width: 767px) {
@@ -354,13 +469,6 @@ h5 {
 
   .header .header__wrapper {
     max-width: 94%;
-  }
-
-  .navigation__burger {
-    height: 22px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
   }
 
   .burger__line {
@@ -426,12 +534,11 @@ h5 {
   .pets__cards {
     justify-content: center;
     padding-top: 42px;
+    flex-direction: column;
   }
 
-  .card:nth-child(6),
-.card:nth-child(5),
-.card:nth-child(4) {
-    display: none;
+  .card {
+    margin: 15px auto;
   }
 
   .pets__buttons {
@@ -475,6 +582,49 @@ h5 {
     width: 87%;
     display: block;
     margin: 0 auto;
+  }
+
+  .popup {
+    width: 240px;
+    height: auto;
+    left: calc(50% - 120px);
+    top: calc(50% - 170px);
+  }
+  .popup__button {
+    right: -32px;
+    top: -55px;
+  }
+  .popup__img {
+    display: none;
+  }
+  .popup__content {
+    margin: 0 10px;
+  }
+  .popup__content .popup__title {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 3.5rem;
+  }
+  .popup__content .popup__subtitle {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2rem;
+  }
+  .popup__content .popup__description {
+    padding-top: 20px;
+    text-align: justify;
+  }
+  .popup__content .popup__list {
+    padding-top: 20px;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+  .popup__content .popup__list li {
+    color: #F1CDB3;
+    padding-bottom: 5px;
+  }
+  .popup__content .popup__list li span {
+    color: #000000;
   }
 }
 html {
