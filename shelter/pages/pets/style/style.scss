@@ -1,0 +1,33 @@
+@import './basic/constants';
+@import './components/header';
+@import './basic/buttons';
+@import './basic/text';
+@import './components/footer';
+@import './components/pets';
+@import './components/popup';
+@import './components/media768';
+@import './components/media320';
+
+
+html {
+   font-size: 10px;
+}
+h1, h2 {
+   margin: 0;
+}
+body {
+   font-size: 1.6rem;
+   box-sizing: border-box;
+}
+.wrapper {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.dark-modal-layer {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background: #000;
+   opacity: 0;
+   transition: opacity 0.5s;
+}

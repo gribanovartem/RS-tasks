@@ -1,0 +1,196 @@
+@media screen and (max-width: 1279px) {
+   // Header
+
+   .header {
+      padding-top: 30px;
+   }
+   .header__wrapper {
+      display: flex;
+      padding: 0 30px;
+   }
+
+   // Start screen
+
+   .start-screen__title {
+      padding-top: 60px;
+   }
+   .start-screen__content {
+      margin: 0 auto;
+      button {
+         display: block;
+         margin: 0 auto;
+      }
+   }
+   .start-screen__text {
+      padding-top: 42px;
+      padding-bottom: 42px;
+   }
+   .start-screen__image img {
+      width: 74%;
+      padding-top: 100px;
+      padding-left: 170px;
+   }
+   .start-screen__wrapper {
+      flex-direction: column;
+   }
+
+   // About
+
+   .about__wrapper {
+      flex-direction: column-reverse;
+   }
+   .about__content {
+      margin: 0 auto;
+      padding-top: 1px;
+      h3 {
+         text-align: start;
+      }
+   }
+   .about__image {
+      padding-right: 0;
+      margin: 0 auto;
+      display: block;
+      padding-top: 81px;
+   }
+
+   // Pets
+
+   .slider  {
+      display: flex;
+      justify-content: space-between;
+   }
+   .pets {
+      &__title {
+         padding-top: 80px;
+      }
+   }
+   .arrow {
+      &:first-child {
+         position: relative;
+         left: 30px;
+      }
+      &:last-child {
+         position: relative;
+         right: 30px;
+      }
+   }
+   .card {
+      &__image {
+         display: block;
+         margin: 0 auto;
+         height: auto;
+      }
+   }
+   @keyframes left {
+      from {
+         left: 0;
+      }
+      to {
+         left: -50%;
+      }
+   }
+   @keyframes right {
+      from {
+         left: 100%;
+      }
+      to {
+         left: 50%;
+      }
+   }
+   @keyframes to-right {
+      from {
+         left: 0;
+      }
+      to {
+         left: 50%;
+      }
+   }
+   @keyframes from-left {
+      from {
+         left: -50%;
+      }
+      to {
+         left: 0;
+      }
+   }
+
+   // Help
+
+   .layout-5 {
+      max-width: 692px;
+      margin: 0 auto;
+   }
+   .layout-5 .help__item {
+      width: 33%;
+      padding: 0;
+      padding-bottom: 55px;
+   }
+
+   // Donations  
+
+   .donation-wrapper {
+      flex-direction: column-reverse;
+      padding-top: 26px;
+   }
+   .donation__content {
+      margin: 0 auto;
+   } 
+   .donation__image {
+      margin-left: 0;
+   }
+   .donation__image img {
+      display: block;
+      margin: 0 auto;
+      padding-top: 50px;
+   }
+
+   // Footer
+
+   .footer-wrapper {
+      justify-content: space-evenly;
+      padding-top: 10px;
+   }
+   .footer__image {
+      padding-top: 56px;
+   }
+
+   // Popup
+
+   .popup {
+      width: 630px;
+      height: 350px;
+      left: calc(50% - 315px);
+      top: calc(50% - 175px);
+      &__img {
+         img {
+            height: 350px;
+         }
+      }
+      &__content {
+         margin: 0 0 0 10px;
+         .popup__title {
+            text-align: start;
+            padding-top: 10px;
+         }
+         .popup__subtitle {
+            text-align: start;
+            padding-top: 10px;
+         }
+         .popup__description {
+            padding-top: 20px;
+         }
+         .popup__list {
+            padding-top: 20px;
+            list-style-type: disc;
+            list-style-position: inside;
+            li {
+               color: $color-primary;
+               padding-bottom: 5px;
+               span {
+                  color: #000000;
+               }
+            }
+         }
+      }
+   }
+}

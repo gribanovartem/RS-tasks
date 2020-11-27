@@ -1,0 +1,25 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "Private repository for @gribanovartem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass --watch shelter/pages/pets/style/style.scss shelter/pages/pets/style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/gribanovartem-JS2020Q3.git"
+  },
+  "author": "Hrybanau Artsiom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/gribanovartem-JS2020Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/gribanovartem-JS2020Q3#readme",
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.26.11"
+  }
+}

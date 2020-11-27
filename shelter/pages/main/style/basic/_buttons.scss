@@ -1,0 +1,27 @@
+.btn {
+   width: 207px;
+   height: 52px;
+   border-radius: 100px;
+   font-family: $text-georgia;
+   font-weight: normal;
+   font-size: 1.7rem;
+   line-height: 130%;
+   letter-spacing: 0.06em;
+   cursor: pointer;
+}
+.btn_colored {
+   background: $color-primary;
+   color: $color-dark-xl;
+   border: none;
+   &:hover {
+      background: $color-primary-light;
+   }
+}
+.btn-bordered {
+   border: 2px solid $color-primary;
+   background: none;
+   &:hover {
+      background: $color-primary-light;
+      border: none;
+   }
+}

@@ -1,0 +1,43 @@
+@import './basic/constants';
+@import './components/header';
+@import './components/start-screen';
+@import './basic/buttons';
+@import './components/about';
+@import './basic/text';
+@import './components/pets';
+@import './components/help';
+@import './components/donation';
+@import './components/footer';
+@import './components/popup';
+@import './components/media768';
+@import './components/media320';
+
+
+html {
+   font-size: 10px;
+}
+h1, h2 {
+   margin: 0;
+}
+body {
+   font-size: 1.6rem;
+   box-sizing: border-box;
+}
+.wrapper {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.wrapper-for-bg {
+   background: url(https://s3-alpha-sig.figma.com/img/3f10/d485/95577108af837b8b441616746225b66e?Expires=1603670400&Signature=Al2CVsN-hh1HMmeO3O5XLqyNcN0PVgSyBq5wk8wkdoX9hxN~cLh6mk3Lsh6sDDhSNBiwmvDqmm-ewg~1WvSUz9ZRdZysCkiLn9NKFPIQ6PUFeTbDOQUKR7Go5YrzP1u30xQum2t~eNP5fp4ywinRAXdS-i~RoYgo8qVuUiU-bwsLsXSziiHzW2yl~z2DKghZieisO-6-DL5QYRw-xinRTrlT17OxekdHvciUartpwoxPyV9t5lnWmPbetGIz1oj0nDAeRJZLkJn4K5w7i81g-s4K6rcD8zvNVf-u-pvGvLDXGDHvMRkCRgcbjjyRNcssuntQb1soiRbPqfpK33RpzQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA),
+   radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+               
+   width: 100%;
+}
+.dark-modal-layer {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background: #000;
+   opacity: 0;
+   transition: opacity 0.5s;
+}
